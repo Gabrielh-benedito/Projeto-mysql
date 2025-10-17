@@ -3,7 +3,7 @@ from crud import inserir_aluno,listar_aluno,atualizar_idade,deletar_aluno
 # python -m pip install streamlit
 
 #Rodar o streamlit
-
+#python -m streamlit run app.py
 st.set_page_config(page_title="Gerenciamento de alunos", page_icon="👨‍🎓")
 
 st.title("Sistema de alunos com MYSQL")
@@ -17,7 +17,7 @@ if menu == "Adicionar aluno":
     if st.button("Cadastrar"):
         if nome.strip() != "":
             inserir_aluno(nome,idade)
-            st.success(f"Aluno{nome} cadastrado com sucesso")
+            st.success(f"Aluno: {nome} cadastrado com sucesso")
         else:
             st.warning("O campo nome não pode ser vazio!.")
         
